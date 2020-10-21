@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>FUndamentos Java Script</h1>
+
+  <script>
+    // var hola = "hola mundo";
+    // let helow = "hola a todos";
+    // console.log(hola);
+
+    // var musica = "rock";
+
+    // console.log("la musica que me gusyas es " + musica);
+    // {
+    //   var musica = "gustavo";
+    //   console.log("la musica que escuho es" + musica);
+    // }
+
+    // console.log("esta musica ", musica);
+    // // ambito de bloque
+    // let musica2 = "reguetton";
+    // console.log("mi musica favorita es " + musica2);
+
+    // {
+    //   let musica2 = "gustavo cerati";
+    //   console.log("el cantante es ", musica2);
+    // }
+
+    // console.log(musica2);
+
+    // const PI = 3.14416;
+    // console.log(PI);
+
+    // let a;
+
+    // a = "sergio";
+    // console.log(a);
+
+    // let colores = ["blanco", "amarillo", "rojo"];
+    // console.log(colores);
+
+    // let objecto = {
+    //   nombre: "sergio",
+    //   apellido: "redondo",
+    //   edad: "25",
+    // };
+    // console.log(objecto);
+
+    // console.log(objecto.apellido);
+    // colores.push("azul");
+    // console.log(colores);
+    // colores.push("sergio");
+    // console.log(colores);
+
+    // objecto.correo = "sergio@gmail.com";
+    // console.log(objecto);
+
+    // console.log(a.prototype);
+
+    // console.log(a.toLocaleLowerCase);
+    // console.log(a.toLocaleLowerCase);
+
+    // let bien = "hola Sergoio";
+    // console.log(bien.length);
+
+    // let nombre = "sergio";
+    // let apellido = "redondo";
+    // // concatenacion
+    // console.log(nombre + " " + apellido);
+    // // interpolacion de variables
+    // //Template String
+
+    // let saludo2 = `Hola mi nombre es ${nombre} ${apellido}`;
+    // console.log(saludo2);
+
+    // let ul = `
+    //         <ul>
+    //           <li>Primavera</li>
+    //           <li>otoño</li>
+    //           <li>invierno</li>
+    //         </ul>
+    //         `;
+    // console.log(ul);
+
+    // let aa = 2;
+    // let b = new Number (10);
+    // console.log(aa,b);
+    // let a = "5.5";
+
+    // // number 
+
+    // console.log(aa.toFixed(3));
+    // console.log(parseInt(a)+ aa);
+    // console.log(a +aa)
+    // console.log(parseFloat(a))
+    // console.log(typeof(a),typeof(b),typeof(aa));
+
+    // let desicion = true;
+    // console.log(desicion);
+    // let falso = false;
+    // console.log(falso);
+
+    // FUNCIONES 
+    // valores de tipo compuestos o complejos 
+
+    // una funcion un bloque de codigo
+    // que se puede ejecutar en culquier momento
+    // una funciones puede recibir parametro y puede retornar valores
+
+    // funciones declaradas y funciones  expresadas 
+
+    function saludo(saludo1, saludo2) {
+
+      console.log(saludo1);
+      console.log(saludo2);
+    }
+
+
+    //   saludo('hola soy sergio','hola sergio');
+    //   saludo();
+
+    //   funcionDeclarada();
+
+    //   function funcionDeclarada(){
+    //     console.log("esto puede ejecutarse en cualquier parte del codigo");
+    //   }
+
+    //   funcionDeclarada();
+
+    //   const funcionExpresada = function(){
+
+    //     console.log(`Esto es una funcion 
+    //     expresada que se le esta asignando a una 
+    //     variable que tendra este valor como constante `);
+    //   }
+
+    //   const functionExpresada2 = ()  =>{
+
+    //     return `esto es una arrayfunction que esta 
+    //     es una nueva implementacion de como se utiliza u
+    //     una funcion expresada`;
+    //   }
+
+    //   const funcionExpresada3 = function(){
+
+    //     console.log("esto es una funcion expresada para otra prueba");
+    //   }
+
+
+    //  //console.log('<br>');
+    //   console.log(funcionExpresada);
+    //   console.log(functionExpresada2);
+    //   funcionExpresada3();
+
+
+    //   const array = ['sergio',' andres','redondo',[1,2,3,['daniela','maria']]];
+
+    //   console.log(`mi nombre es ${array[0]} ${array[1]} y mi appellido
+
+    //    es ${array[2]}`);
+    //    console.log(array.length);
+    //    console.log(array);
+    //    console.log(array[3][3][0]);
+
+
+    //    const c = Array.of(2,3,'ñ','l');
+    //    console.log(c);
+
+    //    const d  = Array(10).fill(0);
+    //    console.log(d)
+
+
+    //    const colores = ['rojo' , 'verde' ,'amarillo'];
+
+    //    colores.forEach(function(dato,index){
+    //      console.log(`<li id=${index}>${dato}</li>`);
+    //    })
+
+    // un objecto es una coleccion de varios valores
+    // let a = new String("Hola");
+    // console.log(a);
+
+    // const b = {
+    //   nombre: 'sergio andres',
+    //   apellido: 'redondo',
+    //   correo: 'sredondo95@gmail.com',
+    //   edad: 25,
+    //   contacto: {
+    //     instagram: 'SerchRedondo',
+    //     telefono: '3014017281'
+    //   },
+    //   saludar: function () {
+    //     console.log('Hola a todos')
+    //   },
+
+    //   decirMiNombre: function () {
+    //     console.log(`Me llamo ${this.nombre} me puedes
+    //     llamar por medio del siguiente telefono ${this.contacto.telefono}`)
+    //   }
+    // }
+    // const c = {};
+
+    // console.log(Object.length)
+    // console.log(Object.keys(b))
+    // console.log(Object.values(b))
+    // console.log(b.hasOwnProperty('nombre'))
+    // console.log(b.hasOwnProperty('celular'))
+    // b.decirMiNombre()
+    // /// Operadores 
+
+    // //Aritmeticos + , - ,* , /
+
+    // // let modulo = 100%2;
+    // // console.log(modulo)
+
+
+    // for (let index = 0; index < 10; index++) {
+
+    //   if (index % 2 == 0) {
+    //     console.log(`Este numero es divisible por 2 y 3 : ${index}`)
+    //   }
+
+    // }
+
+    // var list = [];
+
+
+    // function numero(numero) {
+
+    //   for (let k = 0; k < list.length; k++) {
+    //     if (list[k] == numero) {
+    //       return false;
+    //     }
+
+    //   }
+    //   return true;
+    // }
+
+    // let array = [1, 2, 3, 2, 4, 5, 7, 6, 9, 2];
+    // list = array.length;
+
+    // for (let index = 0; index < array.length; index++) {
+
+    //   let count = 0;
+
+    //   for (let j = 0; j < array.length; j++) {
+    //     if (array[index] == array[j]) {
+    //       count++;
+    //       if (numero(array[index])) {
+    //         list = array[index];
+    //       }
+    //     }
+    //   }
+
+    //   if (list != 0) {
+    //     console.log(`El numero ${list} se repite ${count}`)
+    //   }
+
+    // }
+
+
+    // Estructuras condicionales 
+
+    let numero = 20;
+    if (numero == 4) {
+      console.log(num);
+    } else if (numero > 10) {
+      console.log(numero);
+    } else {
+      console.log(numero)
+    }
+
+    let data = (numero > 10) ? true : false;
+    console.log(data)
+
+
+    let numero2 = 10;
+    switch (numero2) {
+      case 1:
+        console.log("estas en el numero 1");
+        break;
+      case 2:
+        console.log("estas en el numero 2");
+        break;
+      case 3:
+        console.log("estas en el numero 3");
+        break;
+      case 4:
+        console.log("estas en el numero 4");
+        break;
+      default:
+        console.log('no estas en ningun caso')
+        break;
+    }
+
+
+    const datos = [
+      {
+        nombre: 'sergio',
+        apellid: 'redondo',
+        edad: 25
+      },
+      {
+        nombre: 'daniela',
+        apellid: 'redondo',
+        edad: 25
+      },
+      {
+        nombre: 'maria',
+        apellid: 'ferrer',
+        edad: 25
+      },
+      {
+        nombre: 'sandra',
+        apellid: 'soto',
+        edad: 25
+      }
+    ];
+
+    const sergio = {
+      nombre: 'sergio',
+      apellid: 'redondo',
+      edad: 25,
+      hobbi: 'I am Programar'
+    }
+
+    console.log(datos);
+    datos.forEach(element => {
+      console.log(element.nombre, element.apellid, element.edad)
+    });
+    // for (const persona in sergio) {
+    //   console.log(`Key:${persona}
+    //   ,Value:${sergio[persona]}`);
+    // }
+    // let numeros = "Sergio Redondo";
+    // for(const elemento of numeros){
+    //   console.log(elemento);
+    // }
+
+    // manejo de errores
+
+    // try {
+    //   console.log("en el try se agrega el codigo a evalualr")
+    //   noExiste;
+    // } catch (error) {
+    //   console.log('captura cualquir error surgido en el try')
+    //   console.log(error);
+    // }finally{
+    //   console.log("el finally se ejecuta siempre al final de un bloque try-cacth")
+    // }
+
+
+    //personalizar try cacht
+
+
+    // try {
+    //   let numero = 's';
+    //   if (isNaN(numero)) {
+    //     throw new Error("El caracter introducido no es un numero")
+    //      }
+    //      console.log(numero *  numero);
+    // } catch (error) {
+    //   console.log(`Se produce el siguiente error ${error}`)
+
+    // }
+    //  let numeros = [1,2,3,4,5,6,7,8,9,0];
+    // for(let i = 0 ; i< numeros.length; i++){
+    //   if(i===5){
+    //     continue;
+    //   }
+    //   console.log(numeros[i]);
+    // }
+
+
+    // let numeros1 = [1,2,3,4,5,6,7,8,9,0];
+    // for(let i = 0 ; i< numeros1.length; i++){
+    //   if(i===5){
+    //     break;
+    //   }
+    //   console.log(numeros1[i]);
+    // }
+
+
+    // let array = [1,2,3];
+
+    //  console.log(array);
+
+    //  let uno = array[0],
+    //  dos = array[1],
+    //  tres = array[2];
+
+    //  console.log(uno,dos,tres)
+
+    //  const [one,two,tree] = array;
+    //  console.log(one,two,tree)
+
+    // objectos literales 
+    // let nombre = 'sergio', apellido = 'redondo', mascota = 'perro';
+
+    //  const object = {
+
+    //    nombre:nombre,
+    //    apellido:apellido,
+    //    mascota:mascota,
+    //    mascotaRuido:function(){
+
+    //     console.log("Gua Gua Gua");
+    //    }
+    //  }
+    //  console.log(object)
+    //  object.mascotaRuido();
+
+    //  const objecto = {
+    //    nombre,
+    //    apellido,
+    //    correo:'sredondo95@gmail.com',
+    //    mascotaRuido(){
+    //      console.log('GUaaa GUaaa Guaaaa');
+    //    }
+
+    //  }
+    //  console.log(objecto)
+    //  objecto.mascotaRuido();
+
+    // parametros Rest
+    // function sumar (a,b, ...c){
+    //   let resultado = a + b;
+    //   c.forEach(function(n){
+    //     resultado += n;
+    //   })
+    //   return resultado;
+    // }
+    // console.log(sumar(2,1,5,7,7 ))
+    //   // operador Spread
+    // const array1 = [1,2,3,4,5] , array2 = [6,7,8,9,0];
+    // const array3 =[...array1 , ...array2];
+    // console.log(array1,array2);
+    // console.log(array3)
+
+
+    // // Arrow Functions 
+
+
+    //   const nombreF = () => {
+
+    //     console.log("Hola nueva funcion");
+    //   }
+
+    //   const nombreF2 = (nombre)  => console.log(nombre);
+
+    //   nombreF2('sergio');
+
+    //   function prueba () {
+
+    //       console.log(this);
+    //   }
+    //   prueba();
+
+
+    //   const nombreF3 =  {
+    //     nombre:"sergio",
+    //     apellido:'redondo',
+    //     ladrar(){
+    //       console.log(this);
+    //     }
+    //   }
+
+    //   nombreF3.ladrar();
+
+    // Prototipos 
+    /*
+      Clases - Modelo a seguir
+      Objeto - es una instancia de una clase
+      Atributo - Es una caracteristicas o propiedad de un objeto
+      (son variables dentro de un objecto)
+    
+      Metodos -> son  las acciones que un objeto puede realizar
+      (son funciones dentro de un objecto)
+    */
+
+    // const animal = {
+    //   nombre:'Snoopy',
+    //   sonar(){
+    //     console.log("Hago Sonidos porque estoy vivo");
+    //   }
+    // }
+
+    // const animal2 = {
+    //   nombre:'Lola Bunny',
+    //   sonar(){
+    //     console.log("Hago sonido porque estoy vivo");
+    //   }
+    // }
+
+    // console.log(animal);
+    // console.log(animal2);
+
+
+    // Funcion constructora
+
+    // Version 1 
+    //  function Animal(nombre,genero){
+    //    this.nombre = nombre;
+    //    this.genero = genero;
+
+    //   this.sonar = function(){
+    //      console.log("Emito mi sonido favorito");
+    //    }
+    //  }
+
+    /////////////////////////////////////////////////////////////////////////////
+
+
+    // function Animal (nombre,genero){
+    //   this.nombre = nombre;
+    //   this.genero = genero;
+    // }
+
+    // Animal.prototype.sonar = function(){
+    //   console.log("Hago sonidos por que estoy vivo");
+    // }
+
+
+    // const zeus = new Animal('Zeus' , 'Macho');
+    // console.log(zeus);
+    // zeus.sonar();
+
+    // // Herencia prototipica
+    // function Perro (nombre,genero,tamanio){
+    //   this.super = Animal;
+    //   this.super(nombre,genero);
+    //   this.tamanio = tamanio;
+    // }
+
+    // Perro.prototype.sonar = function(){
+    //   console.log("Yo soy un perro y mi sonido es Ladrar");
+    // }
+
+    // Perro.prototype.ladrar = function(){
+    //   console.log("Soy el Perro GUaaaaa Guaaaa");
+    // }
+
+    // Perro.prototype.saludar = function(){
+    //   console.log("Hola guaaaaa");
+    // }
+    //  let samoyedo = new Perro('Jackye','Macho','50 centrimetors');
+    //  console.log(samoyedo);
+    //  samoyedo.sonar();
+    //  samoyedo.ladrar();
+    //  samoyedo.saludar();
+
+
+    //  class Animal {
+
+    //    constructor(nombre, genero){
+    //     this.nombre = nombre;
+    //      this.genero = genero;
+    //    }
+
+    //    sonar(){
+    //     console.log("YO hago un sonido porque soy un animal");
+    //    }
+
+    //    saludar(){
+    //      console.log("Hola soy el " + this.nombre);
+    //    }
+    //  }
+
+
+    // class Perro extends Animal {
+
+    //   constructor(nombre, genero, tamanio) {
+    //     super(nombre, genero);
+    //     this.tamanio = tamanio;
+    //     this.raza = null;
+    //   }
+
+    //   sonar() {
+    //     console.log("Yo soy un perro");
+    //   } ladrar() {
+    //     console.log("GUaaa Guaaa");
+    //   }
+
+    //   static queEres() {
+    //     console.log('soy un perrro y tal tal tal');
+    //   }
+
+
+    //   get getRaza() {
+    //     return this.raza;
+    //   } set setRaza(raza) {
+    //     this.raza = raza;
+    //     return this.raza;
+    //   }
+    // }
+
+    // let persona = new Animal('sergio','masculino','150');
+
+    // console.log(persona.getRaza)
+    // console.log(persona.setRaza = 'humano');
+    // console.log()
+
+
+// let mini = new Animal('minimi','hembra');
+// let zeus = new Perro ('Zes','Macho','60cm')
+// console.log(mini)
+// console.log(zeus)
+// mini.saludar();
+// zeus.sonar();
+// mini.sonar();
+
+// /////////////////////////////////////////
+
+
+// console.log(zeus.getRaza);
+// zeus.setRaza = 'samoyedo';
+// console.log(zeus.getRaza)
+
+
+// Perro.queEres();
+
+// Perro.valueOf();
+
+// console.log(console)
+// console.clear();
+// console.log(document)
+// console.dir(window);
+// console.dir(document)
+// console.clear();
+
+// console.group("Cursos de aprendizaje de sergio");
+// console.log('Aprendiendo JavaScript');
+// console.log('Aprendiendo Java');
+// console.groupEnd();(
+
+// console.table(Object.entries(console).sort()))
+
+
+// console.clear();
+
+// let x = 10 , y = 15   ;
+// let prueba = "se espera que X sea mayor a y";
+
+// console.assert(x > y , {x,y,prueba});
+
+// console.log(Date())
+
+// let fecha = new Date();
+
+// console.log(fecha);
+// console.log(fecha.getDate())
+// console.log(fecha.getDay())
+//  console.log(fecha.getMonth())
+//  console.log(fecha.getFullYear())
+//  console.log(fecha.toDateString())
+//  console.log(fecha.toLocaleString())
+//  console.log(fecha.toLocaleDateString())
+//  console.log(fecha.getUTCHours())
+//  console.clear()
+//  let cumple = new  Date(1999,05,11);
+//  console.log(cumple)
+
+
+//  console.log(Math.abs(55.5))
+//  console.log(Math.ceil(55.5))
+//  console.log(Math.floor(55.5))
+//  console.log(Math.round(55.5))
+//  console.log(Math.sqrt(55.5))
+//  console.log(Math.pow(2,3))
+//  console.log(Math.sign(55.5))
+//  console.log(Math.round(Math.random()*10))
+
+
+// console.log(window);
+// let alerta = alert("esto es una alert"),
+//  confirmarcion = confirm("esto es una confirmacion"),
+//  aviso = prompt("esto es una aviso");
+
+//  console.log(alerta);
+//  console.log(confirmarcion);
+//  console.log(aviso);
+
+
+
+// let cadena = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio blanditiis veniam odit consectetur quo ipsa adipisci error odio aut ducimus quos natus placeat quae deserunt nesciunt corrupti provident, culpa aliquam."
+
+// let expReg  = new RegExp("dolor","ig");
+
+//  let expReg2 =/dolor/ig;
+
+//  console.log(expReg2.test(cadena))
+//  console.log(expReg.exec(cadena))
+
+/// funcion anonima auto ejecutable
+
+
+// (function (){
+//   alert("hola");
+// })();
+
+// // version clasica
+// (function (d,w,c){
+//   console.log('hola');
+//   console.log(d)
+//   console.log(w)
+//   c.log("este documento")
+// })(document,window,console);
+
+// // La crockFord (JavaScrip the good Parts)
+// ((function(){
+//   console.log("Version Crokford");
+// })());
+
+// //version Unitaria
+
+// +function(){
+//   console.log("funcion unitaria");
+
+// }();
+
+
+// //Facebook
+
+// !function(){
+//   console.log("Verion facebook")
+// }();
+
+
+// Exportar e importar modulos
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>

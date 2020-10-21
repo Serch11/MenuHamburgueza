@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // var numero1 = 5;
+        // var numero2 = 8;
+
+        // if (numero1 < numero2) {
+        //     console.log("numero1 no es mayor que numero2");
+        // }
+        // if (numero1 > 0) {
+        //     console.log("numero2 es positivo");
+        // }
+        // if (numero1 > 0 && numero1 !==0) {
+        //     console.log("numero1 es negativo o distinto de cero");
+        // }
+        // if (numero1 + 1 < numero2) {
+        //     console.log("Incrementar en 1 unidad el valor de numero1 no lo hace mayor o igual que numero2");
+        // }
+
+
+        // console.log(Math.sign(numero2))
+
+
+        ////// segundo ejercicio realizado 
+        //     var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 
+        //     'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+
+
+        //     let dni = prompt("Digite un DNI de 9 digitos")
+        //     let letra = prompt("Digite una Letra Excepto I , Ñ , U ")
+
+        //     if(dni > 999999999){
+        //         alert("El numero proporcionado no es valido");
+        //     }else{
+        //         var res  = dni % 23
+        //         console.log("calculando dato")
+        //         console.log(Math.trunc(res));
+        //         console.log("obteniendo letra")
+        //         console.log(letras[res]);
+        //     }
+
+
+        //     console.log(letras.includes(letra))
+        //     console.log("-----")
+        // //     for(let i = 0; i < letras.length;i++){
+        // //        if(letra === letras[i]){
+        // //             var dato = "";
+        // //             dato = letras[i];
+        // //            console.log(dato)
+        // //        }
+        // //    }
+        //     console.log("--fin FOr---")
+        //    // console.log(dato);
+
+        //    if(letra === letras[res]){
+        //        alert("La letra coincide con el DNI digitado");
+        //    }else{
+        //        alert("La letra no coincide con el DNI digitado")
+        //    }
+
+
+        // tercer ejercicio solucionado
+        // let numero  = 5;
+
+        // var  res = 1;
+        // for(let i = 1; i <= numero ; i ++){
+        //     console.log("que lleva I" + i)
+        //     console.log( `${res} * ${i}`)
+        //     res = res * i;
+        //     console.log(res) 
+        // }
+
+        // console.log(`EL factorial de !5 = ${res} `)
+
+        // ejercicio resuelto
+        // const ParOimpar = (numero) => {
+        //     if(numero % 2 === 0 ){
+        //          console.log("el numero es par")
+        //     }else{
+        //          console.log("el numero es impar")
+        //     }
+        // }
+
+        // ParOimpar(5);
+
+
+        const MayuYminus = (palabra) => {
+            // comparamos si la palabra esta escrita en minuscula 
+            if (palabra === palabra.toLowerCase()) {
+                console.log("La palabra esta escrita en minusculas")
+            }
+            // comparamos si la palabra esta escrita en  mayusculas
+            else if (palabra === palabra.toUpperCase()) {
+                console.log("la palabra esta en mayuscula")
+            } else {
+                var y = 0;
+                var x = 0;
+
+                for (let index = 0; index < palabra.length; index++) {
+
+                    var charCode = palabra[index].charCodeAt();
+                    console.log(`la letra => ${palabra[index]} `+  charCode);
+
+                    //si pertenece a mayuscula
+                    if (charCode >= 65 && charCode <= 90) {
+                        x++;
+
+
+                    } 
+                    //perteneces a mayusculas
+                    else if (charCode >= 97 && charCode <= 127) {
+                        y++;
+                    }
+                }
+
+                console.log(`la palabra esta compuesta de ${x} mayusculas y ${y} minusculas`);
+            }
+        }
+
+        MayuYminus('hoy hace mucho calor')
+        MayuYminus('Aqui ESTAmos a 35 Grados')
+        MayuYminus('A LA PISCINA')
+
+    </script>
+
+</body>
+
+</html>

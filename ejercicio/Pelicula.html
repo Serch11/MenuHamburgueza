@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Pelicula </title>
+</head>
+
+<body>
+    <h1>
+        Ejercicio Pelicula
+    </h1>
+
+
+    <script>
+
+        // 27 )Programa una clase llamada pelicula 
+        // la clase recibira un objecto al momento de instanciarse con los siguientes datos: id de la pelicula 
+        // en IMDB , titulo , director , año de estreno , pais o paises de origen , generos y 
+        // calificacion de IMBD.
+
+        // todos los datos del objecto son obligatorio 
+        // valida que el id IMDB tenga 9 caracteres , los primero 2 sean letras 
+        // y los 7 restante numeros
+
+        //     - valida que el titulo no rebase los 100 caracteres
+        //     - valida que el director no rebase los 50 caracteres 
+        //     - valida que el año de estreno sea un numero entero de 4 digitos
+        //     - valida que el pais o paises  sea introducido en forma de arreglo 
+        //     - valida que los generos sean introducido de forma de arreglo 
+        //     - valida que los generos introducidos esten dentro de los generos aceptados
+        //     - crea un metodo estatico que devuelva los generos aceptados
+        //     - Valida  que la calificacion sea un numero entre 0 y 10 pudiendo ser decimal de una posicion
+        //             - Crea un metodo que devuelva toda la ficha tecnica de la pelicula 
+        //             - A partir de un arreglo de con la informacion de 3 peliculas genera 
+        //             3 instancias de la clase de forma automatizada e imprime la ficha tecniuca de cada pelicula
+
+        // ** generos aceptados : Accion , Adult , Adventure , Animation , Biography , Comedy ,
+        // Crimen , Documentary, Drama , Family , Fantasy , Film Noir , Game-show , History , Horro
+        // , Musical , Music , Mystery , news , Realiti Tv  , Romance , Sci-FI , Short , Sport , 
+        // Talk-Show , Thriller , war , Western
+
+
+        class Pelicula {
+
+            constructor({ id, titulo, director, fechaEstreno, pais, genero, calificacion }) {
+
+
+                this.id = id;
+                this.titulo = titulo;
+                this.directo = director;
+                this.fechaEstreno = fechaEstreno;
+                this.pais = pais;
+                this.genero = genero;
+                this.calificacion = calificacion;
+
+
+                //validaciones
+
+                this.validarID(id);
+                this.validarTitulo(titulo);
+                this.validarDirector(director);
+                this.validarFechaEstreno(fechaEstreno);
+                this.valirdarPaises(pais);
+                this.validarGeneros(genero);
+                this.validarCalificacion(calificacion);
+            }
+
+            //valimos que las cadenas no esten vacias y sean un texto
+            validarCadena(propiedad, valor) {
+                //console.log(valor)
+                //console.log(typeof(valor))
+                if (!valor) return console.warn(`El valor ingresado ${propiedad} esta vacio ${valor}`);
+                if (typeof valor !== 'string') return console.warn(`El valor ${valor} ingresado en ${propiedad} no es un texto`);
+
+                return true;
+            }
+            //valida que la logitud de un numero no sobrepase
+            validarLongitud(propiedad, valor, longitud) {
+
+                if (!valor) return console.warn(`El valor ingresado en  ${propiedad} esta vacio ${valor}`);
+                if (typeof valor !== 'string') return console.warn(`El valor ${valor} ingresado en ${propiedad} no es un texto`);
+                //console.log(longitud);
+                //console.log(valor.length);
+                if (valor.length > longitud) return console.warn(`El valor ${valor} sobrepasa la longitud ${longitud} limite`);
+
+                return true;
+            }
+            // validar que el dato ingresado sea un numero
+            validarNumero(propiedad, valor) {
+                if (!valor) return console.warn(`El valor ingresado en  ${propiedad} esta vacio ${valor}`);
+                if (typeof valor !== 'number') return console.warn(`El valor ${valor} ingresado en ${propiedad} no es un texto`);
+
+                return true;
+            }
+
+            //validar que sea un array
+
+            validarArray(propiedad, valor) {
+
+                if (!(valor instanceof Array)) return console.warn(`El valor ingresa en ${propiedad} no es un array ${valor}`)
+                if (!valor) return console.warn(`la propiedad ${propieda} esta vacia ${valor} `);
+
+                for (let valores of valor) {
+                    if (typeof valores !== 'string') {
+                        //console.log(typeof(valores))
+                        return console.warn(`El valor ${valores} ingresado en ${propiedad} solo puede ser textos`)
+                    }
+                }
+
+                return true;
+
+            }
+
+            validarID(id) {
+                if (this.validarCadena("IMDB id", id)) {
+                    if (!(/^([a-z]){2}([0-9]){7}$/.test(id))) {
+                        return console.warn(` La  cadena ${id} no es valida ingresa 2 letras en minusculas y 7 numeros`);
+                    }
+                }
+            }
+
+            validarTitulo(cadena) {
+                if (this.validarLongitud("Titulo", cadena, 100)) {
+                }
+            }
+
+            validarDirector(cadena) {
+                if (this.validarLongitud("Director", cadena, 50)) {
+
+                }
+            }
+
+            validarFechaEstreno(fecha) {
+                if (this.validarNumero("Fecha Estreno", fecha)) {
+                    if (!(/^([0-9]){4}$/.test(fecha))) {
+                        return console.warn(` la fecha ${fecha} ingresada supera los 4 digitos`)
+                    }
+                }
+            }
+
+            valirdarPaises(paises) {
+
+                if (this.validarArray("Paises", paises)) {
+
+                }
+            }
+
+            static get ListaGeneros() {
+
+                return ['Accion', 'Adult', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Crimen', 'Documentary', 'Drama',
+                    'FamilyFantasy', 'Film Noir', 'Game-show', 'History', 'Horro', 'Musical', 'Music', 'Mystery', 'news', 'Realiti Tv', 'Romance', 'Sci-FI', 'Short', 'Sport',
+                    'Talk-Show', 'Thriller', 'war', 'Western']
+            }
+
+            static verGeneros() {
+
+                return console.info(`Los generos disponibles son \n  ${Pelicula.ListaGeneros.join(",")}`);
+            }
+
+            validarGeneros(generos) {
+
+                //console.log(newArray);
+                if (this.validarArray("Generos", generos)) {
+                    for (let genero of generos)
+                        //console.log(genero,Pelicula.ListaGeneros.includes(genero));
+                        if (!Pelicula.ListaGeneros.includes(genero)) {
+                            console.error(`Genero(s) incorrectos ${generos.join(",")}`);
+                            Pelicula.verGeneros();
+                        }
+
+                }
+            }
+
+            validarCalificacion (numero){
+
+                if(this.validarNumero("Calificacion",numero)){
+                    if(numero < 0 || numero > 10){
+                        return console.warn(`EL valor ${numero} no puede ser menor de 0 y mayor de 10 `)
+                    }else{
+                        this.calificacion = numero.toFixed(1);
+                        //console.log(this.calificacion)
+                    }
+                }
+            }
+
+            FichaPelicula() {
+                return console.info(
+                    ` /**** Ficha Tecnica de la Pelicula **** \\\ \n${this.id}\n${this.titulo}\n${this.director}\n${this.fechaEstreno}\n${this.pais}\n${this.genero}\n${this.calificacion}`
+                )
+            }
+
+        }
+
+
+        let pelicula = new Pelicula({
+
+            id: 'tt1234567',
+            titulo: 'Batman',
+            director: 'Christopher Nolan',
+            fechaEstreno: 1996,
+            pais: ['colombia', 'argentina'],
+            genero: ['Adventure', 'Accion'],
+            calificacion : 7.5,
+            
+
+        })
+
+        const mipeliculas = [
+            {
+
+                id: 'tt1234567',
+                titulo: 'Batman Begins',
+                director: 'Christopher Nolan',
+                fechaEstreno: 2005,
+                pais: ['USA'],
+                genero: ['Accion'],
+                calificacion: 10
+
+            },
+            {
+
+                id: 'tt1234567',
+                titulo: 'John Wick',
+                director: 'Chad Stahelski',
+                fechaEstreno: 2014,
+                pais: ['USA'],
+                genero: ['Accion', 'Crimen', 'Thriller'],
+                calificacion: 7.4
+
+            }
+        ];
+
+        pelicula.FichaPelicula();
+
+
+        mipeliculas.forEach(el =>  new Pelicula(el).FichaPelicula());
+
+        //pelicula.verGeneros();
+
+    </script>
+
+</body>
+
+</html>
